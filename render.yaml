@@ -1,11 +1,16 @@
 services:
   - type: web
-    name: lista-compras-php
+    name: lista-compra
     env: docker
     plan: free
-    autoDeploy: true
-    dockerContext: .
-    dockerfilePath: Dockerfile
-    buildCommand: ""
-    startCommand: ""
-    healthCheckPath: /
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_HOST
+        value: nome_do_host_postgres
+      - key: DB_NAME
+        value: nome_do_banco
+      - key: DB_USER
+        value: seu_usuario
+      - key: DB_PASS
+        value: sua_senha

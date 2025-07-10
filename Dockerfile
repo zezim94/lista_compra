@@ -1,13 +1,15 @@
-# Usa imagem oficial PHP com Apache
+# Usa imagem oficial do PHP com Apache
 FROM php:8.2-apache
 
-# Instala extensões PHP necessárias (ajuste conforme seu projeto)
-RUN docker-php-ext-install pdo pdo_mysql mysqli
+# Instala dependências do sistema e extensões necessárias para PostgreSQL
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql
 
 # Copia os arquivos do projeto para o container
 COPY . /var/www/html/
 
-# Habilita rewrite (útil para .htaccess, se usar)
+# Habilita o módulo rewrite do Apache
 RUN a2enmod rewrite
 
 # Exponha a porta padrão do Apache

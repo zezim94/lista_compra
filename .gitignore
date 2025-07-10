@@ -1,9 +1,8 @@
-# Ignorar arquivos sensíveis e temporários
 .env
-config/db_local.php
+/vendor/
 *.log
-vendor/
-node_modules/
-.idea/
-*.sqlite
 .DS_Store
+Thumbs.db
+/node_modules/
+.idea/
+.vscode/
