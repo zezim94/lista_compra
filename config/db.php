@@ -1,8 +1,8 @@
 <?php
-$host = getenv('DB_HOST') ?: 'localhost';
+$host = getenv('DB_HOST') ?: 'dpg-d1k1asali9vc738uq7tg-a.oregon-postgres.render.com';
 $db   = getenv('DB_NAME') ?: 'lista_compra';
-$user = getenv('DB_USER') ?: 'seu_usuario';
-$pass = getenv('DB_PASS') ?: 'sua_senha';
+$user = getenv('DB_USER') ?: 'postgre_rtu3_user';
+$pass = getenv('DB_PASS') ?: 'xjeodmeyfwpfautlcqiegjhet';
 $port = getenv('DB_PORT') ?: '5432';
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$db";
