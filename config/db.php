@@ -1,16 +1,16 @@
 <?php
-$host = getenv('DB_HOST') ?: 'lista_compra';
+$host = getenv('DB_HOST') ?: 'localhost';
 $db   = getenv('DB_NAME') ?: 'lista_compra';
-$user = getenv('DB_USER') ?: 'postgre_rtu3_user';
-$pass = getenv('DB_PASS') ?: 'WpvaJVjpVuMfD3PsjXQsljewH28jsnMl';
-$charset = 'utf8mb4';
+$user = getenv('DB_USER') ?: 'seu_usuario';
+$pass = getenv('DB_PASS') ?: 'sua_senha';
+$port = getenv('DB_PORT') ?: '5432';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = "pgsql:host=$host;port=$port;dbname=$db";
 
 try {
     $pdo = new PDO($dsn, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    // Mostre erro (em produção, grave em log!)
+    // Em produção, logue isso!
     die("Erro na conexão com o banco de dados: " . $e->getMessage());
 }
