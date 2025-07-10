@@ -1,5 +1,5 @@
 <?php
-$host = getenv('DB_HOST') ?: 'localhost';
+$host = getenv('DB_HOST') ?: 'lista_compra';
 $db   = getenv('DB_NAME') ?: 'lista_compra';
 $user = getenv('DB_USER') ?: 'postgre_rtu3_user';
 $pass = getenv('DB_PASS') ?: 'WpvaJVjpVuMfD3PsjXQsljewH28jsnMl';
