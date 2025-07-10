@@ -1,6 +1,6 @@
 <?php
 $host = getenv('DB_HOST') ?: 'dpg-d1k1asali9vc738uq7tg-a.oregon-postgres.render.com';
-$db   = getenv('DB_NAME') ?: 'lista_compra';  // seu database name
+$db   = getenv('DB_NAME') ?: 'postgre_rtu3';  // seu database name
 $user = getenv('DB_USER') ?: 'postgre_rtu3_user';
 $pass = getenv('DB_PASS') ?: 'xjeodmeyfwpfautlcqiegjhet';
 $port = getenv('DB_PORT') ?: '5432';
