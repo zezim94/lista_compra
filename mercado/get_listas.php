@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include'../config/db.php';
 
 if (isset($_GET['mercado_id'])) {
     $mercado_id = $_GET['mercado_id'];

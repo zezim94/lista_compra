@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include'../config/db.php';
 
 // Verifique se o mercado_id foi passado
 if (isset($_GET['mercado_id'])) {

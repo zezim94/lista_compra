@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include'../config/db.php';
 
 if (!isset($_SESSION['usuario_id']) || !isset($_POST['finalizar']) || empty($_SESSION['itens_temp'])) {
     header("Location: compras.php");

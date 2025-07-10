@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include'../config/db.php';
 
 if (isset($_GET['id'])) {
     $item_id = (int) $_GET['id'];

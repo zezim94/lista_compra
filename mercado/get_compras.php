@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include'../config/db.php';
 
 $lista_id_1 = isset($_GET['lista_id_1']) ? (int) $_GET['lista_id_1'] : null;
 $lista_id_2 = isset($_GET['lista_id_2']) ? (int) $_GET['lista_id_2'] : null;

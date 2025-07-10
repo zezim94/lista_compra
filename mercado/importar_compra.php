@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../config/db.php');
+include'../config/db.php';
 
 if (!isset($_SESSION['usuario_id']) || !isset($_GET['compra_id'])) {
     http_response_code(400);
